@@ -15,6 +15,9 @@ def clean_transcript(file_path, youtube_link=""):
         if re.match(r"\d{2};\d{2};\d{2};\d{2} - \d{2};\d{2};\d{2};\d{2}", line):
             continue
 
+        if re.match(r"\d{2}:\d{2}:\d{2}:\d{2} - \d{2}:\d{2}:\d{2}:\d{2}", line):
+                    continue
+
         if re.match(r"V\d+,\s*\d+", line):
             continue
 
