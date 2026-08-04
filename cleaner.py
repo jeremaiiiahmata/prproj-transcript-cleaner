@@ -24,6 +24,9 @@ def clean_transcript(file_path, youtube_link=""):
         if re.match(r"Unknown", line):
             continue
 
+        if re.match(r"Speaker 1", line):
+                    continue
+
         cleaned.append(line)
 
     if youtube_link:
